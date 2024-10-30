@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/VehicleStoreSpring?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: admin123
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none #Hibernate will only read instructions won't create structures. The Migration will do that.
+    # properties:
+      # hibernate:
+        # dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: false
+springdoc:
+  pathsToMatch: /api/**/v1/**
+  swagger-ui:
+    use-root-path: true
