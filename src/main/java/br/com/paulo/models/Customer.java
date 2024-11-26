@@ -20,7 +20,7 @@ public class Customer extends Person {
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	
 	@Column(nullable = false, length = 7)
 	private String rg;
@@ -31,17 +31,17 @@ public class Customer extends Person {
 	
 	public Customer() {}
 	
-	public Customer(Integer id, String rg, Address address) {
+	public Customer(Long id, String rg, Address address) {
 		this.id = id;
 		this.rg = rg;
 		this.address = address;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
